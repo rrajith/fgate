@@ -1,0 +1,13 @@
+version: "3"
+services: 
+  web:
+    image: rajithrr/fg_php73_wkhtmlpdf
+    #image: rajithrr/fg_php73
+#    build:
+#	context: ./docker/Dockerfile
+    ports:
+     - "8080:80"
+     - "8081:81"
+    volumes:
+     - .:/var/www/html/fairgate:Z
+    restart: on-failure
